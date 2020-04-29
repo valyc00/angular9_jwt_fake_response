@@ -1,5 +1,22 @@
 # Fake response with HttpMockRequestInterceptor
+per aggiungere response fake:
+aggiugere la classe:
+interceptor.mock.ts
 
+e nel file:
+app.module.ts 
+
+aggiungere:
+
+import { HttpMockRequestInterceptor } from './interceptor.mock';
+
+e
+
+ {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpMockRequestInterceptor,
+      multi: true
+ }
 # Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
